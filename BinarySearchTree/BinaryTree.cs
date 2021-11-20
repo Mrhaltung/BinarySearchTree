@@ -8,13 +8,13 @@ namespace BinarySearchTree
     {
         public Node root = null;
 
-        public void Insert(int i)
+        public void Add(int i)
         {
-            Node newNode = new Node();
-            newNode.data = i;
+            Node node = new Node();
+            node.data = i;
             if (root == null)
             {
-                root = newNode;//if root is null assign newNode to root
+                root = node;//if root is null assign newNode to root
             }
             else
             {
@@ -28,7 +28,7 @@ namespace BinarySearchTree
                         current = current.LeftNode;
                         if (current == null)
                         {
-                            parent.LeftNode = newNode;  //go left
+                            parent.LeftNode = node;  //go left
                             break;
                         }
                     }
@@ -37,13 +37,14 @@ namespace BinarySearchTree
                         current = current.RightNode;
                         if (current == null)
                         {
-                            parent.RightNode = newNode;  //go right
+                            parent.RightNode = node;  //go right
                             break;
                         }
                     }
 
                 }
             }
+            Console.WriteLine(node.data + " : Data is added");
         }
 
         public void TraverseInorder(Node root)
@@ -82,9 +83,5 @@ namespace BinarySearchTree
             TraversePostorder(root.RightNode);
             Console.Write(root.data + " ");
         }
-
-
-
-
     }
 }

@@ -9,21 +9,20 @@ namespace BinarySearchTree
             Console.WriteLine("Welcome to Binary Search Tree Program.");
             BinaryTree binarytree = new BinaryTree();
 
-            BinaryTree obj1 = new BinaryTree();
-            obj1.Insert(56);
-            obj1.Insert(30);
-            obj1.Insert(70);
+            binarytree.Add(56);
+            binarytree.Add(30);
+            binarytree.Add(70);
 
-            Console.Write("Inorder result : ");
-            obj1.TraverseInorder(obj1.root);
+            Console.Write("\n Inorder result : ");
+            binarytree.TraverseInorder(binarytree.root);
             Console.WriteLine();
 
-            Console.Write("Post-order result : ");
-            obj1.TraversePostorder(obj1.root);
+            Console.Write("\n Post-order result : ");
+            binarytree.TraversePostorder(binarytree.root);
             Console.WriteLine();
 
-            Console.Write("Pre-order result : ");
-            obj1.TraversePreorder(obj1.root);
+            Console.Write("\n Pre-order result : ");
+            binarytree.TraversePreorder(binarytree.root);
             Console.WriteLine();
         }
     }
