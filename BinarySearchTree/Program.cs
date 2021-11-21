@@ -34,6 +34,9 @@ namespace BinarySearchTree
             Console.Write("\n Pre-order result : ");
             binarytree.Preorder(binarytree.root);
             Console.WriteLine();
+
+            bool isFound = binarytree.Search(binarytree.root, 63);
+            Console.WriteLine("63 is found " + isFound);
         }
     }
 }

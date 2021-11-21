@@ -83,5 +83,25 @@ namespace BinarySearchTree
             Postorder(root.RightNode);
             Console.Write(root.data + " ");
         }
+
+        public bool Search(Node root, int value)
+        {
+            if (root == null)
+            {
+                return false;
+            }
+            if (root.data == value)
+            {
+                return true;
+            }
+            else if (root.data > value)
+            {
+                return Search(root.LeftNode, value);
+            }
+            else
+            {
+                return Search(root.RightNode, value);
+            }
+        }
     }
 }
