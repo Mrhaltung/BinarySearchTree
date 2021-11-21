@@ -14,7 +14,7 @@ namespace BinarySearchTree
             node.data = i;
             if (root == null)
             {
-                root = node;//if root is null assign newNode to root
+                root = node;
             }
             else
             {
@@ -28,7 +28,7 @@ namespace BinarySearchTree
                         current = current.LeftNode;
                         if (current == null)
                         {
-                            parent.LeftNode = node;  //go left
+                            parent.LeftNode = node;
                             break;
                         }
                     }
@@ -37,7 +37,7 @@ namespace BinarySearchTree
                         current = current.RightNode;
                         if (current == null)
                         {
-                            parent.RightNode = node;  //go right
+                            parent.RightNode = node;
                             break;
                         }
                     }
@@ -47,40 +47,40 @@ namespace BinarySearchTree
             Console.WriteLine(node.data + " : Data is added");
         }
 
-        public void TraverseInorder(Node root)
+        public void Inorder(Node root)
         {
             if (root == null)
             {
                 return;
             }
 
-            TraverseInorder(root.LeftNode);
+            Inorder(root.LeftNode);
             Console.Write(root.data + " ");
-            TraverseInorder(root.RightNode);
+            Inorder(root.RightNode);
 
         }
-        public void TraversePreorder(Node root)
+        public void Preorder(Node root)
         {
             if (root == null)
             {
                 return;
             }
             Console.Write(root.data + " ");
-            TraversePreorder(root.LeftNode);
+            Preorder(root.LeftNode);
 
-            TraversePreorder(root.RightNode);
+            Preorder(root.RightNode);
 
         }
-        public void TraversePostorder(Node root)
+        public void Postorder(Node root)
         {
             if (root == null)
             {
                 return;
             }
 
-            TraversePostorder(root.LeftNode);
+            Postorder(root.LeftNode);
 
-            TraversePostorder(root.RightNode);
+            Postorder(root.RightNode);
             Console.Write(root.data + " ");
         }
     }
